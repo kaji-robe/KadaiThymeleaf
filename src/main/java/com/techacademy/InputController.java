@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class InputController {
-    @GetMapping("/input{valOut}")
+    @GetMapping("/input?previous={valOut}")
     public String getInput(@PathVariable String valOut, Model model) {
         // パスパラメータで受け取った値をModelに登録
         model.addAttribute("valOut", valOut);
