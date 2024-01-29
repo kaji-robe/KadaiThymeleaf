@@ -22,13 +22,25 @@
     </form>
 
 
+
 <!--/*　実験　*/-->
 <body>
-    <th:if="${request.requestURI == '/input'}">
+    <th:if="${previous != null'}">
         AAAA
     </th:if>
     <th:else>
+        BBBB
+    </th:else>
+</body>
+
+
+<!--/*　実験　*/-->
+<body>
+    <th:if="${request.requestURI == '/input'}">
         CCCC
+    </th:if>
+    <th:else>
+        DDDD
     </th:else>
 </body>
 
