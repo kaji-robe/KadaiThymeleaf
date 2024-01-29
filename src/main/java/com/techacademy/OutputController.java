@@ -7,7 +7,6 @@ package com.techacademy;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -15,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class OutputController {
 
     @PostMapping("/output")
-    public String postOutput(@RequestParam("val") String val, Model model) {
+    public String postOutput(@RequestParam("valIn") String valIn, Model model) {
         //フォームから送信されてきた値をModelに登録
-        model.addAttribute("val", val);
+        model.addAttribute("valIn", valIn);
         //output.htmlに画面遷移
         return "output";
     }

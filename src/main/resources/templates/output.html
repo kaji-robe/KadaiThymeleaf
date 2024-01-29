@@ -13,8 +13,8 @@
 </head>
 <body>
     <h1>Thymeleaf Page</h1>
-    <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
-    <p><a th:href="@{/input?previous={aid}(aid=${val})}">入力画面に戻る</a></p>
+    <p th:text="'入力された値は「' + ${valIn} + '」です。'"></p>
+    <p><a th:href="@{/input?previous={aid}(aid=${valIn})}">入力画面に戻る</a></p>
 
 </body>
 </html>
