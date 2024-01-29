@@ -16,9 +16,17 @@
     <h1 th:text="#{content.title}">Thymeleaf Page</h1>
     <h2 th:text="#{content.nyuryoku}"></h2>
     <p th:text="#{content.atai}"></p>
-    <form method="post" action="/confirm">
+    <form method="post" action="/output">
         <input type="text" name="val">
         <button type="submit">送信</button>
     </form>
+
+<!--/*
+    <div th:switch="${previous}">
+    <p th:case="input" th:text="''"></p>
+    <p th:case="*" th:text="'前回入力された値は「」でした。'"</p>
+    </div>
+*/-->
+
 </body>
 </html>
