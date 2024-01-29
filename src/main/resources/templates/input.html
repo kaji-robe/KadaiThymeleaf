@@ -15,11 +15,6 @@
 <body>
     <h1 th:text="#{content.title}">Thymeleaf Page</h1>
     <h2 th:text="#{content.nyuryoku}"></h2>
-
-<!--/*
-    <p th:if = "${valIn} = " th:text="''">th:if</p>
-*/-->
-
     <p th:text="#{content.atai}"></p>
     <form method="post" action="/output">
         <input type="text" name="valIn">
@@ -27,13 +22,13 @@
     </form>
 
 <!--/*
-    <div th:switch="${valOut}">
-    <p th:case="input" th:text="''"></p>
-    <p th:case="*" th:text="'前回入力された値は「」でした。'"></p>
-    </div>
+    <p th:if="${valOut}="input" " th:text="''">th:if</p>
 */-->
 
-
+    <div th:switch="${valOut}">
+    <p th:case="null" th:text="'bbb'"></p>
+    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
+    </div>
 
 </body>
 </html>
