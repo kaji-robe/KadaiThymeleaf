@@ -1,0 +1,61 @@
+<!--/*
+    リンクURL式
+    「送信」ボタンをクリックすると、入力フォームの値をPOSTメソッドでoutputに送信する.
+
+    パラメータ previous に値が設定されていたら「前回入力された値は「{previousの値}」でした。」と表示する。
+    ※{previousの値}の部分は、実際のpreviousの値を表示する
+*/-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Kadai of Thymeleaf</title>
+</head>
+<body>
+    <h1 th:text="#{content.title}">Thymeleaf Page</h1>
+    <h2 th:text="#{content.nyuryoku}"></h2>
+    <p th:text="#{content.atai}"></p>
+    <form method="post" action="/output">
+        <input type="text" name="valIn">
+        <button type="submit">送信</button>
+    </form>
+
+
+
+<!--/*　実験　*/-->
+<body>
+    <th:if="${previous != null'}">
+        AAAA
+    </th:if>
+    <th:else>
+        BBBB
+    </th:else>
+</body>
+
+
+<!--/*　実験　*/-->
+<body>
+    <th:if="${request.requestURI == '/input'}">
+        CCCC
+    </th:if>
+    <th:else>
+        DDDD
+    </th:else>
+</body>
+
+
+<!--/*　実験　*/-->
+    <div th:switch="${valOut}">
+    <p th:case="a" th:text="'koko'"></p>
+    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
+    </div>
+
+
+<!--/*
+    <p th:if="${valOut}="input" " th:text="''">th:if</p>
+*/-->
+
+
+</body>
+</html>
