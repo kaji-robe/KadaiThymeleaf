@@ -3,6 +3,7 @@
 //メソッド名: getInput
 //処理内容: 入力画面の初期表示をする
 
+
 package com.techacademy;
 
 import org.springframework.stereotype.Controller;
@@ -14,16 +15,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class InputController {
-
-    @GetMapping("/{valOut}")
-    public String getInput(@PathVariable String valOut, Model model) {
-     // パスパラメータで受け取った値をModelに登録
-        model.addAttribute("valOut", valOut);
+    @GetMapping("/input")
+    public String getInput() {
      // input.htmlに画面遷移
         return "input";
-        }
+    }
 
-
+//  @GetMapping("{valOut}")
+//  public String getInput(@PathVariable String valOut, Model model) {
+//     // パスパラメータで受け取った値をModelに登録
+//        model.addAttribute("valOut", valOut);
+//     // input.htmlに画面遷移
+//        return "input";
 
 }
 
