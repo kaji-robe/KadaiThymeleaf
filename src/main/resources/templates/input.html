@@ -21,14 +21,17 @@
         <button type="submit">送信</button>
     </form>
 
+    <p th:text="'入力された値は「' + ${valout} + '」です。'"></p>
+
+    <div th:switch="${valOut}">
+    <p th:case="Dummy" th:text="'Dummy'"></p>
+    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
+    </div>
+
 <!--/*
     <p th:if="${valOut}="input" " th:text="''">th:if</p>
 */-->
 
-    <div th:switch="${valOut}">
-    <p th:case="null" th:text="'bbb'"></p>
-    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
-    </div>
 
 </body>
 </html>
