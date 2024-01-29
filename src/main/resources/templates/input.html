@@ -22,11 +22,14 @@
     </form>
 
 <!--/*
-    <div th:switch="${previous}">
+    <div th:switch="${valOut}">
     <p th:case="input" th:text="''"></p>
-    <p th:case="*" th:text="'前回入力された値は「」でした。'"</p>
+    <p th:case="*" th:text="'前回入力された値は「' + "{aid}(aid=${valIn}" + '」でした。'"</p>
     </div>
 */-->
+
+
+
 
 </body>
 </html>
