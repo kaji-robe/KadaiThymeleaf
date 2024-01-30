@@ -16,54 +16,15 @@
     <h1 th:text="#{content.title}">Thymeleaf Page</h1>
     <h2 th:text="#{content.nyuryoku}"></h2>
     <p th:text="#{content.atai}"></p>
-    <p th:if="${previous} != null" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+
+    <p th:unless="${previous} == null" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+
     <form method="post" action="/output">
         <input type="text" name="valIn">
         <button type="submit">送信</button>
     </form>
 
 
-<!--/*
-<p th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
-*/-->
-
-<!--/*
-    <p th:if="${ptrvious} eq  =  " th:text="''">th:if</p>
-*/-->
-
-
-<!--/*　実験
-<body>
-    <div th:switch="${valIn}">
-    <p th:case="a" th:text="'koko'"></p>
-    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
-    </div>
-</body>
-*/-->
-
-
-
-<!--/*　実験
-<body>
-    <th:if="${previous != null'}">
-        AAAA
-    </th:if>
-    <th:else>
-        BBBB
-    </th:else>
-</body>
-*/-->
-
-<!--/*　実験
-<body>
-    <th:if="${request.requestURI == '/input'}">
-        CCCC
-    </th:if>
-    <th:else>
-        DDDD
-    </th:else>
-</body>
-　*/-->
 
 </body>
 </html>

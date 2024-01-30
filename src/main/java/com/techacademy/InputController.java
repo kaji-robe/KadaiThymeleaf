@@ -23,13 +23,5 @@ public class InputController {
     // input.htmlに画面遷移
     return "input";
     }
-
-
-//   @GetMapping("/output")
-//    public String getOutPut(@RequestParam("previous") String paramPrevious, Model model) {
-//    // パスパラメータで受け取った値をModelに登録
-//    model.addAttribute("previous", paramPrevious);
-//    // input.htmlに画面遷移
-//    return "input";
-        }
+}
 
