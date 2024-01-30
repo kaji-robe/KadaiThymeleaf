@@ -21,9 +21,11 @@
         <button type="submit">送信</button>
     </form>
 
+
 <!--/*
     <p th:if="${valOut}="input" " th:text="''">th:if</p>
 */-->
+
 
 <!--/*　実験　*/-->
 <body>
@@ -31,6 +33,8 @@
 </body>
 
 <p th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
+
+
 
 <!--/*　実験　*/-->
 <body>
@@ -52,6 +56,8 @@
     </th:else>
 </body>
 
+
+
 <!--/*　実験　*/-->
 <body>
     <th:if="${request.requestURI == '/input'}">
@@ -61,11 +67,6 @@
         DDDD
     </th:else>
 </body>
-
-
-
-<!--/*　実験　*/-->
-
 
 
 </body>
