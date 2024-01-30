@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class InputController {
 
    @GetMapping("/input")
-    public String getInput(@RequestParam("previous") String paramPrevious, Model model) {
+    public String getInput(@RequestParam(name = "previous", required = false) String previous, Model model) {
     // パスパラメータで受け取った値をModelに登録
-    model.addAttribute("previous", paramPrevious);
+    model.addAttribute("previous", previous);
     // input.htmlに画面遷移
     return "input";
-}
+    }
 
 
 //   @GetMapping("/output")
