@@ -21,10 +21,12 @@
         <button type="submit">送信</button>
     </form>
 
-
-<!--/*　実験　*/-->
-<p><a th:href="@{input/(previous=${param.id[0]})}">リンク3</a></p>
-
+<!--/*
+    <p th:if="${valOut}="input" " th:text="''">th:if</p>
+*/-->
+<body>
+<p><a th:href="@{/input(previous=${param.previous[0]})}">リンク3</a></p>
+</body>
 
 <!--/*　実験　*/-->
 <body>
@@ -48,24 +50,15 @@
 
 
 <!--/*　実験　*/-->
+<body>
     <div th:switch="${valOut}">
     <p th:case="a" th:text="'koko'"></p>
     <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
     </div>
+</body>
 
 <!--/*　実験　*/-->
 
-
-
-<!--/*
-    <p th:if="${valOut}="input" " th:text="''">th:if</p>
-*/-->
-
-
-
-<!--/*
-    <p th:if="${valOut}="input" " th:text="''">th:if</p>
-*/-->
 
 
 </body>
