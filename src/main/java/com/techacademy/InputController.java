@@ -16,20 +16,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class InputController {
 
-    //    @GetMapping("/input{valOut}")
-    //    public String getInput(@PathVariable String valOut, Model model) {
-    //    // パスパラメータで受け取った値をModelに登録
-    //     model.addAttribute("valOut", valOut);
-    //    // input.htmlに画面遷移
-    //          return "input";
-    //    }
-
-            @GetMapping("/input")
-            public String getInput() {
-            //input.htmlに画面遷移
-                return "input";
-                }
+   @GetMapping("/input")
+    public String getInput() {
+    //input.htmlに画面遷移
+    return "input";
 }
 
-
+   @GetMapping("/input")
+    public String getInput(@RequestParam("valIn") String valIn, Model model) {
+    // パスパラメータで受け取った値をModelに登録
+    model.addAttribute("valIn", valIn);
+    // input.htmlに画面遷移
+    return "input";
+        }
+    }
 

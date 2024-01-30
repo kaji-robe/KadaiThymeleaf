@@ -23,21 +23,22 @@
 
 
 <!--/*
-    <p th:if="${valOut}="input" " th:text="''">th:if</p>
+    <p th:if="${valIn}="input" " th:text="''">th:if</p>
 */-->
 
 
 <!--/*　実験　*/-->
-<p th:text="'前回入力された値は「' + ${valIn} + '」でした。'"></p>
+<p th:text="'前回入力された値は「' + ${valout} + '」でした。'"></p>
 
 
 <!--/*　実験　*/-->
 <body>
     <div th:switch="${valIn}">
     <p th:case="a" th:text="'koko'"></p>
-    <p th:case="*" th:text="'前回入力された値は「' + ${valIn} + '」でした。'"></p>
+    <p th:case="*" th:text="'前回入力された値は「' + ${valout} + '」でした。'"></p>
     </div>
 </body>
+
 
 
 <!--/*　実験　*/-->
