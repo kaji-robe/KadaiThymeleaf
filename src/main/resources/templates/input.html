@@ -30,6 +30,18 @@
 <p><a th:href="@{/input(previous=${param.previous[0]})}">リンク3</a></p>
 </body>
 
+<p th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
+
+<!--/*　実験　*/-->
+<body>
+    <div th:switch="${valOut}">
+    <p th:case="a" th:text="'koko'"></p>
+    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
+    </div>
+</body>
+
+
+
 <!--/*　実験　*/-->
 <body>
     <th:if="${previous != null'}">
@@ -51,13 +63,6 @@
 </body>
 
 
-<!--/*　実験　*/-->
-<body>
-    <div th:switch="${valOut}">
-    <p th:case="a" th:text="'koko'"></p>
-    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
-    </div>
-</body>
 
 <!--/*　実験　*/-->
 
