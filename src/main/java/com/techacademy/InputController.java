@@ -22,12 +22,12 @@ public class InputController {
     return "input";
 }
 
-   @GetMapping("/input")
-    public String getInput(@RequestParam("valIn") String valIn, Model model) {
+   @GetMapping("/output")
+    public String getOutPut(@RequestParam("previous") String paramPrevious, Model model) {
     // パスパラメータで受け取った値をModelに登録
-    model.addAttribute("valIn", valIn);
+    model.addAttribute("previous", paramPrevious);
     // input.htmlに画面遷移
     return "input";
         }
-    }
+}
 

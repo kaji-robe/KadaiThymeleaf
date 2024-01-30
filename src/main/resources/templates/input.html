@@ -22,26 +22,27 @@
     </form>
 
 
+<p th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+
+
+
 <!--/*
     <p th:if="${valIn}="input" " th:text="''">th:if</p>
 */-->
 
 
-<!--/*　実験　*/-->
-<p th:text="'前回入力された値は「' + ${valout} + '」でした。'"></p>
-
-
-<!--/*　実験　*/-->
+<!--/*　実験
 <body>
     <div th:switch="${valIn}">
     <p th:case="a" th:text="'koko'"></p>
-    <p th:case="*" th:text="'前回入力された値は「' + ${valout} + '」でした。'"></p>
+    <p th:case="*" th:text="'前回入力された値は「' + ${valOut} + '」でした。'"></p>
     </div>
 </body>
+*/-->
 
 
 
-<!--/*　実験　*/-->
+<!--/*　実験
 <body>
     <th:if="${previous != null'}">
         AAAA
@@ -50,10 +51,11 @@
         BBBB
     </th:else>
 </body>
+*/-->
 
 
 
-<!--/*　実験　*/-->
+<!--/*　実験
 <body>
     <th:if="${request.requestURI == '/input'}">
         CCCC
@@ -62,6 +64,7 @@
         DDDD
     </th:else>
 </body>
+　*/-->
 
 </body>
 </html>
